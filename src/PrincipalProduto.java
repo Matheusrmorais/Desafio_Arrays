@@ -1,5 +1,8 @@
+import interfaces.Forma;
+import modelo.Circulo;
 import modelo.Produto;
 import modelo.ProdutoPerecivel;
+import modelo.Quadrado;
 
 import java.util.ArrayList;
 
@@ -30,6 +33,9 @@ public class PrincipalProduto {
 
         ProdutoPerecivel produtoPerecivel = new ProdutoPerecivel("Produto C", 12.75, 2, "2023-12-31");
         System.out.println(produtoPerecivel);
+
+
+
 
 
     }

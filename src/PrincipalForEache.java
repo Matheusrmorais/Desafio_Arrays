@@ -1,7 +1,5 @@
-import modelo.Animal;
-import modelo.Cachorro;
-import modelo.Gato;
-import modelo.Produtos;
+import interfaces.Forma;
+import modelo.*;
 
 import java.util.ArrayList;
 
@@ -64,6 +62,48 @@ public class PrincipalForEache {
 
         double precoMedio = somaPreco  / listaProdutos.size();
         System.out.println("Preço Médio: " + precoMedio);
+
+
+
+        Circulo circulo = new Circulo();
+
+        circulo.calcularArea(5);
+        Circulo circulo1 = new Circulo();
+        circulo1.calcularArea(20);
+        Quadrado quadrado = new Quadrado();
+        quadrado.calcularArea(5);
+        Quadrado quadrado1 = new Quadrado();
+        quadrado1.calcularArea(20);
+
+        ArrayList<Forma> calculo = new ArrayList<>();
+        calculo.add(circulo);
+        calculo.add(circulo1);
+        calculo.add(quadrado);
+        calculo.add(quadrado1);
+
+        for (Forma p : calculo) {
+            System.out.println(p);
+        }
+
+
+        ContaBancaria conta = new ContaBancaria(250,5413);
+        ContaBancaria conta1 = new ContaBancaria(150,5414);
+        ContaBancaria conta2 = new ContaBancaria(230,5415);
+
+        ArrayList<ContaBancaria> listaContas = new ArrayList<>();
+        listaContas.add(conta);
+        listaContas.add(conta1);
+        listaContas.add(conta2);
+
+        ContaBancaria contaMaiorSaldo = listaContas.get(0);
+        for (ContaBancaria c : listaContas){
+            if(c.getSaldo() > contaMaiorSaldo.getSaldo()){
+                contaMaiorSaldo = c;
+            }
+
+
+        }
+        System.out.println("Conta maior saldo: " + contaMaiorSaldo.getConta() + " "+ contaMaiorSaldo.getSaldo());
 
 
 
